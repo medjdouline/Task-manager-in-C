@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-// ANSI color codes for pretty formatting
+// ANSI color codes
 #define PINK "\033[38;5;219m"
 #define LIGHT_PURPLE "\033[38;5;183m"
 #define PURPLE "\033[38;5;141m"
@@ -251,9 +251,9 @@ void viewtasks(Queue Q) {
     } else {
         Queue tempQ;
         InitQueue(&tempQ);
-        printf("\n%s?贩贩贩贩贩贩贩贩%s\n", PINK, RESET);
+        printf("\n%s?路路路路路路路路路路路路路路路路%s\n", PINK, RESET);
         printf("%s?  %sTASK LIST  %s?%s\n", LIGHT_PURPLE, PINK, LIGHT_PURPLE, RESET);
-        printf("%s?贩贩贩贩贩贩贩贩%s\n\n", PINK, RESET);
+        printf("%s?路路路路路路路路路路路路路路路路%s\n\n", PINK, RESET);
 
         while (!isQEmpty(Q)) {
             Maintask* task = (Maintask*)Head(Q);
@@ -280,7 +280,7 @@ void viewtasks(Queue Q) {
             Dequeue(&Q, NULL);
         }
 
-        printf("\n%s?贩贩贩贩贩贩贩贩%s\n", PINK, RESET);
+        printf("\n%s?路路路路路路路路路路路路路路路路%s\n", PINK, RESET);
 
         while (!isQEmpty(tempQ)) {
             Enqueue(&Q, Head(tempQ));
@@ -384,9 +384,9 @@ void deletesubtask(Queue* Q, char taskName[], char subtaskName[]) {
 }
 
 void displayMenu() {
-    printf("\n%s?贩贩贩贩贩贩贩贩贩贩贩贩贩?%s\n", PINK, RESET);
+    printf("\n%s?路路路路路路路路路路路路路路路路路路路路路路路路路路?%s\n", PINK, RESET);
     printf("%s? %s? TASK MANAGER ? %s?%s\n", LIGHT_PURPLE, PINK, LIGHT_PURPLE, RESET);
-    printf("%s?贩贩贩贩贩贩贩贩贩贩贩贩贩?%s\n\n", PINK, RESET);
+    printf("%s?路路路路路路路路路路路路路路路路路路路路路路路路路路?%s\n\n", PINK, RESET);
     
     printf("%s 1 %s Create a project %s?%s\n", PINK, LIGHT_PURPLE, PINK, RESET);
     printf("%s 2 %s Add a main task %s?%s\n", PINK, LIGHT_PURPLE, PINK, RESET);
@@ -397,7 +397,7 @@ void displayMenu() {
     printf("%s 7 %s Delete a task %s?%s\n", PINK, LIGHT_PURPLE, PINK, RESET);
     printf("%s 8 %s Delete a subtask %s?%s\n", PINK, LIGHT_PURPLE, PINK, RESET);
     printf("%s 9 %s Exit %s?%s\n", PINK, LIGHT_PURPLE, PINK, RESET);
-    printf("\n%s?贩贩贩贩贩贩贩贩贩贩贩贩贩?%s\n", PINK, RESET);
+    printf("\n%s?路路路路路路路路路路路路路路路路路路路路路路路路路路?%s\n", PINK, RESET);
 }
 
 void clearInputBuffer() {
